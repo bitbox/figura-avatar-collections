@@ -1,7 +1,7 @@
 # Pickelrye's Figura avatar collection
 It's a collection of Avatars I made, ranging from the silly to the dead.
 
-To download everything, just download the entire codebase, and put it in the comfy /figura/avatars/ folder that your instance made for you.
+To download everything, just download the entire codebase, and put it in the comfy `/figura/avatars/` folder that your instance made for you.
 
 If you want something specific, then let me tell you what the three categories are like.
 
