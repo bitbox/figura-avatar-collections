@@ -8,7 +8,7 @@ local swingOnBody = SwingingPhysics.swingOnBody
 
 require("libs.GSAnimBlend")
 
-config:setName("nplusplus_color_config_DEV") -- rename config file to appropriate name
+config:setName("nplusplus_color_config") -- rename config file to appropriate name
 
 if config:load("firstRun") ~= 1 then -- if firstRun is found to have nothing
   config:save("firstRun",1) -- then set it to one
