@@ -17,21 +17,6 @@ if config:load("firstRun") ~= 1 then -- if firstRun is found to have nothing
   config:save("fastScrollKey", "key.keyboard.left.shift") -- oh yeah, default key for color scrolling.
 end
 
---[[
-idea:
-use config to save custom color.
-funnel it through from everything else.
-
-ping.preset(config.customColor(thing))
-
-onscroll save +1 to customcolor
-pings
-
-idk, could that work?
-
-im gonna need some serious help... and communication.
-]]--
-
 --hides vanilla model
 vanilla_model.PLAYER:setVisible(false)
 
@@ -72,8 +57,6 @@ presets = { -- Freely editable area start
     ["action"] = {"Midas","gold_block" --[[ i had to]],vec(0.87,0.6,0.26)}
   }
 } -- Freely editable area end
-
-local ScrollAmount = 0 -- initialize it. just do that.
 
 function pings.colorMade()
   local Body_Tex = textures["model.ninja"]
@@ -216,19 +199,12 @@ colorCopy = {
 } 
 
 for key,value in pairs(colorCopy.body) do
-  --local color = colorPage:getActions()[1]:getTitle()
-  --> get color name to figure out which channel to change values on.
   colorPage:newAction()
     :setTitle(value["action"][1])
     :setItem(value["action"][2])
     :setHoverColor(value["action"][3])
     :onScroll(Bscroll)
-    --> the idea: Use Xscroll (B or H) to make changing specific RGB values not look like spaghetti code.
-    -- im trying to outsmart a room of einsteins, basically.
 end
-
---no duct tape, I want the presets to be messed with, in-game.
--- AND NO, modifying the file DOES NOT COUNT.
 
 for key,value in pairs(colorCopy.body) do
   HB_colorPage:newAction()
@@ -261,7 +237,7 @@ local HB_toggle = mainPage:newAction() --create Headband toggle
   :hoverColor(1, 0, 0.23)
   :setOnToggle(pings.headband_toggle)
 
-local ThemeButton = mainPage:newAction()
+local ThemeButton = mainPage:newAction() -- presets button
   :title("Select Preset")
   :item("minecraft:potion")
   :hoverColor(0, (164/255), (182/255))
@@ -269,25 +245,7 @@ local ThemeButton = mainPage:newAction()
       action_wheel:setPage(presetPage)
   end)
 
---[[ local Scroll_Red = colorPage:newAction()
-  :title("Red")
-  :item("minecraft:red_dye")
-  :hoverColor(1, 0.2, 0)
-  :onScroll(Bscroll)
-
-local Scroll_Green = colorPage:newAction()
-  :title("Green")
-  :item("minecraft:green_dye")
-  :hoverColor(0.3, 1, 0)
-  :onScroll(Bscroll)
-
-local Scroll_Blue = colorPage:newAction()
-  :title("Blue")
-  :item("minecraft:blue_dye")
-  :hoverColor(0, 0.5, 1)
-  :onScroll(Bscroll) ]]
-
-local Color_back = colorPage:newAction()
+local Color_back = colorPage:newAction() -- back button for body color menu
   :title("Back")
   :item("minecraft:tnt")
   :hoverColor(1, 1, 0)
@@ -299,25 +257,7 @@ local Color_HB_next = colorPage:newAction() --the start of the headband stuff
   :hoverColor(1, 0, 23)
   :onLeftClick(function() action_wheel:setPage(HB_colorPage) end)
 
---[[ local HB_Scroll_Red = HB_colorPage:newAction()
-  :title("Red")
-  :item("minecraft:red_dye")
-  :hoverColor(1, 0.2, 0)
-  :onScroll(Hscroll)
-
-local HB_Scroll_Green = HB_colorPage:newAction()
-  :title("Green")
-  :item("minecraft:green_dye")
-  :hoverColor(0.3, 1, 0)
-  :onScroll(Hscroll)
-
-local HB_Scroll_Blue = HB_colorPage:newAction()
-  :title("Blue")
-  :item("minecraft:blue_dye")
-  :hoverColor(0, 0.5, 1)
-  :onScroll(Hscroll) ]]
-
-local HB_Color_fuck = HB_colorPage:newAction()
+local HB_Color_fuck = HB_colorPage:newAction() -- back to main button for headband color menu
   :title("Back to Main")
   :item("minecraft:observer")
   :hoverColor(1, 1, 0)
@@ -332,7 +272,7 @@ local HB_Color_back = HB_colorPage:newAction()
 --END OF COLOR.LUA REMAINS
 
 
---used for when the avatar entity is loaded for the first time
+--"used for when the avatar entity is loaded for the first time" okay baussss
 function events.entity_init()
   Headband_trail = {
     RootGroup.Head.headband1,
@@ -344,7 +284,7 @@ function events.entity_init()
     RootGroup.Head.headband1.headband2.headband3.headband4.headband5.headband6.headband7,
     RootGroup.Head.headband1.headband2.headband3.headband4.headband5.headband6.headband7.headband8
   }
-    --Yes!
+
   BoneHB_List = {
     BoneHeadband1 = nil,
     BoneHeadband2 = nil,
