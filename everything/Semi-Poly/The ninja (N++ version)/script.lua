@@ -91,10 +91,10 @@ end
 local fastScroll = keybinds:newKeybind("Faster Scroll (Action Wheel)", config:load("fastScrollKey"), true)
 
 local function Bscroll(dir) -- modifies current body color via scroll wheel.
-  log(dir)
+  -- log(dir)
 
   local Title = action_wheel:getSelectedAction():getTitle()
-  print(Title)
+  -- print(Title)
   
   local pastColor = config:load("Bcolor")
 
@@ -121,7 +121,7 @@ local function Bscroll(dir) -- modifies current body color via scroll wheel.
   else
     return nil
   end
-  print(pastColor)
+  -- print(pastColor)
 
   config:save("Bcolor", pastColor)
   pings.colorMade() 
