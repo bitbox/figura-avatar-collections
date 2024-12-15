@@ -23,6 +23,6 @@ yay i think you did it. if not, then i'll just let youtube babysit you.
 
 > The libraries used in here have their own can of worms attached to them, so I always credit them to make sure I don't fall out of line with anyone. Please dont kill me, I ain't a master of OOP or a god of Lua at all.
 
-> In short: Do what you want that doesn't require a price tag or a patent with this collection. You are free to ruin it artistically. Finally, **pls give credit** and you'll be better that sssniperwolf.
+> In short: Do what you want that doesn't require a price tag or a patent with this collection. You are free to ruin it artistically. Finally, **pls give credit** and you'll be better than sssniperwolf.
 
 > I also yap a lot. I can't help it.
