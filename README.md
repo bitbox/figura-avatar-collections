@@ -1,4 +1,4 @@
-![PFC_logo](https://github.com/user-attachments/assets/4ba276f5-4578-46e2-b3d4-db0500de412b)
+![Logo-GitHub_version](https://github.com/user-attachments/assets/c7d07928-8781-4f91-8f17-3b5c053f5d89)
 This is a collection of Figura avatars I made, ranging from the silly to the dead.
 (if unsure about what a "figura" is, I'd recommend searching up "Figura minecraft mod" and hope to god you'll know.)
 
