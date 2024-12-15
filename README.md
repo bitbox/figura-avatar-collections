@@ -22,5 +22,7 @@ yay i think you did it. if not, then i'll just let youtube babysit you.
 > This collection is kinda-protected by the GPL v2 License, which should permit remixing or modifying for free and to whomever, but not and never for profit or any other legal junk. This does not need to be patented, it's just free virtual cosmetics for Cave Game. Please at least credit me (Pickelrye) and/or any of the original artists if you tend to use any of my avatars as some frankenstein base lmao. It's a butterfly effect for information like that.
 
 > The libraries used in here have their own can of worms attached to them, so I always credit them to make sure I don't fall out of line with anyone. Please dont kill me, I ain't a master of OOP or a god of Lua at all.
+
 > In short: Do what you want that doesn't require a price tag or a patent with this collection. You are free to ruin it artistically. Finally, **pls give credit** and you'll be better that sssniperwolf.
+
 > I also yap a lot. I can't help it.
